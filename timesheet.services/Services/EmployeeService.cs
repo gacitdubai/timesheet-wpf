@@ -16,7 +16,7 @@ namespace timesheet.data.Services
         private string _baseurl = "";
         public EmployeeService()
         {
-            _baseurl = ConfigurationManager.AppSettings["baseUrl"].ToString();
+          
         }
         public async Task<List<Employee>> GetEmployees()
         {
