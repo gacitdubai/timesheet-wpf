@@ -11,6 +11,19 @@
         <local1:EmployeeViewModel/>
     </UserControl.DataContext>
     <Grid>
-        <DataGrid ItemsSource="{Binding employees,UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="True"></DataGrid>
+        <Border   BorderBrush="Transparent" BorderThickness="0,0,0,0" >
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>                    
+                </Grid.RowDefinitions>
+                <TextBlock Text="Employee List"/>
+              
+                
+                <DataGrid Grid.Row="1" ItemsSource="{Binding employees,UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="True"></DataGrid>
+            </Grid>
+            
+        </Border>
+           
     </Grid>
 </UserControl>
